@@ -10,6 +10,11 @@ let Candidates = {
     "educM": null
 };
  
+let tracker = {
+    voteTracker: null, 
+    regTracker: null
+}
+
 function EventLoader(event) {
     document.getElementById('mainWindow').innerHTML = document.getElementById(event).innerHTML;
 }
@@ -142,6 +147,7 @@ function Timer(date, target, effect, msg) {
         document.getElementById(target).innerHTML = "Candidates registration expiring in "+ days + "d "  
         + hours + "h " + minutes + "m " + seconds + "s "; 
             if (t < 0) { 
+                tracker.regTracker = 'done';
                 clearInterval(x); 
                 document.getElementById(target).innerHTML = msg;
                 document.getElementById('mainWindow').innerHTML = '';
@@ -152,6 +158,7 @@ function Timer(date, target, effect, msg) {
 }
 
 function Timer2(date, target, effect, msg) {
+    document.getElementById("voteMainButton").disabled=false;
     let deadline = new Date(date).getTime(); 
     let x = setInterval(function() { 
         let now = new Date().getTime(); 
@@ -160,7 +167,7 @@ function Timer2(date, target, effect, msg) {
         let hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
         let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
         let seconds = Math.floor((t % (1000 * 60)) / 1000); 
-        document.getElementById(target).innerHTML = "Voting process expiring in "+ days + "d "  
+        document.getElementById(target).innerHTML = "**Voting process expiring in "+ days + "d "  
         + hours + "h " + minutes + "m " + seconds + "s "; 
             if (t < 0) { 
                 clearInterval(x); 
@@ -174,5 +181,16 @@ function Timer2(date, target, effect, msg) {
     }, 1000); 
 }
 
-Timer("Jun 16, 2020 06:23:00", "voteTimer", "registerMainButton", "Registration ended");
-Timer2("Jun 16, 2020 06:31:00", "voteTimer2", "voteMainButton", "voting process ended")
+setInterval(() => {
+    checker();
+}, 1000);
+
+function checker() {
+    if (tracker.regTracker === 'done') {
+        Timer2("Jun 16, 2021 06:31:00", "voteTimer2", "voteMainButton", "voting process ended")
+    } else {
+        document.getElementById("voteMainButton").disabled=true;
+    }
+}
+
+Timer("Mar 18, 2021 14:50:00", "voteTimer", "registerMainButton", "Registration ended");

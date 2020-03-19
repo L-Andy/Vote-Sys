@@ -48,6 +48,14 @@
         <i class="ico fas fa-phone"></i>
         <input id="no" type="text" class="w3-input w3-border w3-round" placeholder="Active Whatsapp Number">
     </div><br />
+    <div class="pan w3-border w3-round">
+        <i class="ico fas fa-pen-nib"></i>
+        <input id="application" type="file" class="w3-input w3-border w3-round">
+    </div><br />
+    <div class="pan w3-border w3-round">
+        <i class="ico fas fa-bank"></i>
+        <input id="payment" type="file" class="w3-input w3-border w3-round">
+    </div><br />
     <button class="w3-button w3-round w3-medium w3-green" onclick="RegisterCandidate()"><i class="fas fa-pen-nib"></i>  Register</button>
     <div id="results"></div>
 </div>

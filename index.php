@@ -21,56 +21,6 @@
     $InfoMsFinals = getInformationMinisterFinal();
 ?>
         <title>Vote</title>
-        <style>
-            .mainBox {
-                text-align: center;
-                padding: 20px;
-            }
-            .subBox {
-                display: inline-block;
-                height: auto;
-                width: 700px;
-                padding: 30px;
-            }
-            .dot {
-                height: 10px;
-                width: 10px;
-                background-color: green;
-                border-radius: 50%;
-                display: inline-block;
-            }
-
-            select {
-                height: 40px;
-                width: 100%;
-                padding: 5px;
-            }
-            
-            .pan {
-                display: flex;
-            }
-
-            .ico {
-                padding: 7px;
-                font-size: 20px;
-                color: #4d7185;
-            }
-
-            input {
-                padding: 20px;
-            }
-
-            button {
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            .opt {
-                width: 18px;
-                height: 18px;
-                padding: 40px;
-            }
-        </style>
     </head>
     <body style="background-color: #3b5243">
        <div class="w3-container mainBox">
@@ -88,15 +38,28 @@
                 <div id="mainWindow"></div>
                 <br />
                 <div id="Note" style="text-align: left; padding: 5px; display: block">
-                    Note:<br/>
                     <span id="voteTimer" style="color: red;"></span><br />
                     <span id="voteTimer2" style="color: red;"></span><br />
-                    Candidates must be<br />
-                    1. tests1<br />
-                    1. tests1<br />
-                    1. tests1<br />
-                    1. tests1<br />
-                    1. tests1<br />
+                    <hr />
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <b>Voting instructions</b><br />
+                            <ul>
+                                <li>Follow the voting button and make your choices</li>
+                                <li>Enter the email and your passport number to complete your voting</li>
+                                <li>Results will be displayed immediatly the voting process has closed</li>
+                                <li>Voting must be done before the timer has run out</li>
+                            </ul>
+                        </div>
+                        <div class="w3-half"><b>Candidates criterias</b><br />
+                        <ul>
+                            <li>Candidates applying for the post of president must be in more 3rd year and above</li>
+                            <li>Candidates applying for any other post must be in 2nd year and above</li>
+                            <li>Applications must be submitted before the timer has run out</li>
+                            <li>All files must be uploaded in pdf format</li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
                 <hr style="margin-bottom: 5px">
                 © USAA <?php echo date('Y'); ?>
