@@ -33,6 +33,7 @@
                 <hr />
                 <button id="registerMainButton" class="w3-button w3-round w3-medium w3-blue" onclick="EventLoader('Register')"><i class="fas fa-pen-nib"></i>  Candidate Registration</button>
                 <button class="w3-button w3-round w3-medium w3-green" onclick="EventLoader('viewCandidates')"><i class="fas fa-eye"></i>  View Candidates</button>
+                <button class="w3-button w3-round w3-medium w3-green" onclick="EventLoader('campaign')"><i class="fas fa-eye"></i>  Open campaign</button>
                 <button id="voteMainButton" class="w3-button w3-round w3-medium w3-green" onclick="EventLoader('Vote')"><i class="fas fa-vote-yea"></i>  Vote</button>
                 <br /><br />
                 <?php include('Components/php/results.php');?>
@@ -86,4 +87,5 @@
     include('Components/php/viewCandidates.php');
     include('Components/php/Vote.php');
     include('Components/php/finalVoteModel.php');
+    include('Components/php/campaign.php');
 ?>

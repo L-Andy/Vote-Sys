@@ -15,21 +15,21 @@ def dataDump():
     Query = """INSERT INTO `Vote`.`Users` 
             (`passportNo`, `firstName`, `secondName`, `sex`, `email`, `phoneNo`, `home`, `university`, `course`, `yearOfAward`, `voted`) 
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
-    with open('/home/landy/Desktop/students.csv') as csv_file:
+    with open('/home/landy/Desktop/students2.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         print "Starting data entry. \n"
         for row in csv_reader:
             data = (
-                    row[1],
-                    row[0].split(' ')[0],
-                    ' '.join(row[0].split(' ')[1:]),
-                    ' ',
-                    ' ',
-                    ' ',
-                    ' ',
-                    ' ',
-                    ' ',
                     row[2],
+                    row[0],
+                    row[1],
+                    ' ',
+                    ' ',
+                    ' ',
+                    ' ',
+                    ' ',
+                    ' ',
+                    '2019',
                     'No'
                 )
             print row
