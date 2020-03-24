@@ -5,7 +5,7 @@
 .subBox {
     display: inline-block;
     height: auto;
-    width: 700px;
+    width: 800px;
     padding: 30px;
 }
 .dot {
@@ -45,4 +45,8 @@ button {
     width: 18px;
     height: 18px;
     padding: 40px;
+}
+
+a {
+    text-decoration: none;
 }

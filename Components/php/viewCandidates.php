@@ -1,11 +1,15 @@
 <div id="viewCandidates" class="w3-border w3-round" style="padding: 20px; display: none">
+*Follow the candidate's name to read his manifesto
     <hr style="margin-bottom: 5px">
     <div style="text-align: left; padding-left: 50px; font-size: 18px;">President</div>
     <hr style="margin-top: 5px">
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($presidents as $president) {?>
-                <li><?php echo $president['firstName'].' '.$president['lastName'].' - '.$president['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($president['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$president['manifesto'];};
+                    ?>" target="_blank"><?php echo $president['firstName'].' '.$president['lastName'].' - '.$president['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -16,7 +20,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($Vps as $Vp) {?>
-                <li><?php echo $Vp['firstName'].' '.$Vp['lastName'].' - '.$Vp['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($Vp['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$Vp['manifesto'];};
+                    ?>" target="_blank"><?php echo $Vp['firstName'].' '.$Vp['lastName'].' - '.$Vp['wilaya'];?></li>
             <?php }
         ?>
     </ol>
@@ -27,7 +34,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($VpGs as $VpG) {?>
-                <li><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$vPG['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($VpG['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$VpG['manifesto'];};
+                    ?>" target="_blank"><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$vPG['wilaya'];?></li>
             <?php }
         ?>
     </ol>
@@ -38,7 +48,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($Gsecs as $Gsec) {?>
-                <li><?php echo $Gsec['firstName'].' '.$Gsec['lastName'].' - '.$Gsec['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($Gsec['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$Gsec['manifesto'];};
+                    ?>" target="_blank"><?php echo $Gsec['firstName'].' '.$Gsec['lastName'].' - '.$Gsec['wilaya'];?></li>
             <?php }
         ?>
     </ol>
@@ -49,7 +62,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($Trs as $Tr) {?>
-                <li><?php echo $Tr['firstName'].' '.$Tr['lastName'].' - '.$Tr['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($Tr['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$Tr['manifesto'];};
+                    ?>" target="_blank"><?php echo $Tr['firstName'].' '.$Tr['lastName'].' - '.$Tr['wilaya'];?></li>
             <?php }
         ?>
     </ol>
@@ -60,7 +76,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($EducMs as $EducM) {?>
-                <li><?php echo $EducM['firstName'].' '.$EducM['lastName'].' - '.$EducM['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($EducM['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$EducM['manifesto'];};
+                    ?>" target="_blank"><?php echo $EducM['firstName'].' '.$EducM['lastName'].' - '.$EducM['wilaya'];?></li>
             <?php }
         ?>
     </ol>
@@ -71,7 +90,10 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($InfoMs as $InfoM) {?>
-                <li><?php echo $InfoM['firstName'].' '.$InfoM['lastName'].' - '.$InfoM['wilaya'];?></li>
+                <li><a href="<?php 
+                    if ($InfoM['manifesto'] == null) {echo "Components/php/manifestoError.php";
+                    } else {echo 'Components/uploads/'.$InfoM['manifesto'];};
+                    ?>" target="_blank"><?php echo $InfoM['firstName'].' '.$InfoM['lastName'].' - '.$InfoM['wilaya'];?></li>
             <?php }
         ?>
     </ol>

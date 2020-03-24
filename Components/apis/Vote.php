@@ -12,7 +12,7 @@
     $educationMinister = $_POST['educM'];
     
    
-    $voterChecker = "SELECT * FROM Vote.Users WHERE passportNo='$Voter' LIMIT 1";
+    $voterChecker = "SELECT * FROM Users WHERE passportNo='$Voter' LIMIT 1";
     $voterCheckerRun = mysqli_query($conn, $voterChecker);
     $voterCheckerRunFinal = mysqli_fetch_array($voterCheckerRun);
 
@@ -25,7 +25,7 @@
 			    <p><?php echo "Vote casted successfully, results at the closure of the voting process"; ?></p></h2>
 		    </div>
             <?php
-            $voterStatusChanger = "UPDATE `Vote`.`Users` SET `voted`='Yes' WHERE `passportNo`='$Voter'";
+            $voterStatusChanger = "UPDATE `Users` SET `voted`='Yes' WHERE `passportNo`='$Voter'";
             $voterEmailUpdate = "UPDATE `Vote`.`Users` SET `email`='$voterEmail' WHERE `passportNo`='$Voter'";
             mysqli_query($conn, $voterStatusChanger);
             mysqli_query($conn, $voterEmailUpdate);
@@ -66,12 +66,12 @@
             and alter the count in the database
         */
 
-        $Query = "SELECT * FROM Vote.Registeration WHERE passportNo='$candidate' LIMIT 1";
+        $Query = "SELECT * FROM Registeration WHERE passportNo='$candidate' LIMIT 1";
         $queryRun = mysqli_query($conn, $Query);
         $queryRunFinal = mysqli_fetch_array($queryRun);
         
         $newCount = $queryRunFinal['counts']+1;
-        $castQuery = "UPDATE `Vote`.`Registeration` SET `counts`='$newCount' WHERE `passportNo`='$candidate'";
+        $castQuery = "UPDATE `Registeration` SET `counts`='$newCount' WHERE `passportNo`='$candidate'";
         $castQueryRun = mysqli_query($conn, $castQuery); 
         return true;
     }

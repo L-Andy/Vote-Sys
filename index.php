@@ -2,6 +2,7 @@
 <?php include('Components/apis/config.php');?>
 <?php include('Components/apis/functions.php');?>
 <?php include('Components/apis/finalFunctions.php');?>
+<?php include('Components/apis/candidateRegistration.php');?>
 <?php
     $presidents = getPresidents();
     $Vps = getVicePresidents();
@@ -37,6 +38,9 @@
                 <?php include('Components/php/results.php');?>
                 <div id="mainWindow"></div>
                 <br />
+                <?php include('Components/php/errors.php');?>
+                <?php include('Components/php/status.php');?>
+                <br />
                 <div id="Note" style="text-align: left; padding: 5px; display: block">
                     <span id="voteTimer" style="color: red;"></span><br />
                     <span id="voteTimer2" style="color: red;"></span><br />
@@ -51,12 +55,21 @@
                                 <li>Voting must be done before the timer has run out</li>
                             </ul>
                         </div>
-                        <div class="w3-half"><b>Candidates criterias</b><br />
+                        <div class="w3-half"><b>Conditions for applicants</b><br />
                         <ul>
-                            <li>Candidates applying for the post of president must be in more 3rd year and above</li>
-                            <li>Candidates applying for any other post must be in 2nd year and above</li>
+                            <li>president: 2nd year and master 1</li>
+                            <li>other posts: 1st year, 2nd year and master 1</li>
+                            <li>All applicants must fullfill all the requirements and upload required documents</li>
                             <li>Applications must be submitted before the timer has run out</li>
                             <li>All files must be uploaded in pdf format</li>
+                        </ul>
+                        <br />
+                        <b>Requirements for all applicants</b>
+                        <ul>
+                            <li>Written application letter</li>
+                            <li>Certificate de scolarite</li>
+                            <li>Manifesto</li>
+                            <li>Application fee (1000DZ)</li>
                         </ul>
                         </div>
                     </div>

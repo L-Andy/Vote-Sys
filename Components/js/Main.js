@@ -19,59 +19,68 @@ function EventLoader(event) {
     document.getElementById('mainWindow').innerHTML = document.getElementById(event).innerHTML;
 }
 
-function RegisterCandidate() {
+// function RegisterCandidate() {
 
-    let Errors = [];
-    let firstName = $("#fn").val();
-    let secondName = $("#sn").val();
-    let passportNumber = $("#psn").val();
-    let yearOfAward = $("#yoe").val();
-    let university = $("#univ").val();
-    let post = $("#pst").val();
-    let Email = $("#email").val();
-    let phoneNumber = $("#no").val();
-    let wilaya = $("#wilaya").val();
+    // let Errors = [];
+    // let firstName = $("#fn").val();
+    // let secondName = $("#sn").val();
+    // let passportNumber = $("#psn").val();
+    // let yearOfAward = $("#yoe").val();
+    // let university = $("#univ").val();
+    // let post = $("#pst").val();
+    // let Email = $("#email").val();
+    // let phoneNumber = $("#no").val();
+    // let wilaya = $("#wilaya").val();
+    // let applicationForm = $("#application").val();
+    // let payForm = $("#payment").val();
 
-    if (firstName.length || secondName.length || passportNumber.length ||
-        Email.length || phoneNumber.length || wilaya.length === 0) {
-        Errors.push("Missing information. please check again")
-    }
-    if (post === 'Post') {
-        Errors.push("Please select post");
-    }
+    // if (firstName.length || secondName.length || passportNumber.length ||
+    //     Email.length || phoneNumber.length || wilaya.length === 0) {
+    //     Errors.push("Missing information. please check again")
+    // }
+    // if (post === 'Post') {
+    //     Errors.push("Please select post");
+    // }
 
-    if (yearOfAward === 'Year of Award') {
-        Errors.push("Please select the year of award");
-    }
+    // if (yearOfAward === 'Year of Award') {
+    //     Errors.push("Please select the year of award");
+    // }
 
-    if (Errors.length != 0) {
-        alert(Errors);
-    } else {
-        $.ajax({
-            method: 'POST',
-            datatype: 'json',
-            url: 'Components/apis/candidateRegistration.php',
-            data: {
-                "userFirstName":firstName,
-                "userSeconNames":secondName,
-                "userPassportNumber":passportNumber,
-                "userYearOfAward":yearOfAward,
-                "userUniversity":university,
-                "userPost":post,
-                "userEmail":Email,
-                "userPhoneNumber":phoneNumber,
-                "userWilaya":wilaya
-            },
-            success: function(html) {
-                $("#results").html(html).show();
-            }
-        });
-    }
+    // // if (Errors.length != 0) {
+    // //     alert(Errors);
+    // // } else {
+    //     $.ajax({
+    //         method: 'POST',
+    //         datatype: 'json',
+    //         url: 'Components/apis/candidateRegistration.php',
+    //         data: {
+    //             "userFirstName":firstName,
+    //             "userSeconNames":secondName,
+    //             "userPassportNumber":passportNumber,
+    //             "userYearOfAward":yearOfAward,
+    //             "userUniversity":university,
+    //             "userPost":post,
+    //             "userEmail":Email,
+    //             "userPhoneNumber":phoneNumber,
+    //             "userWilaya":wilaya,
+    //             "userApplication": applicationForm,
+    //             "userPayment": payForm
+    //         },
+    //         success: function(html) {
+    //             $("#results").html(html).show();
+    //         }
+    //     });
+    // // }
     
-}   
+    
+// }   
 function Launch(action) {
     document.getElementById("finalVoteModel").style.display=action;
 
+}
+
+function Launch2(action) {
+    document.getElementById("uploadmodal").style.display=action;
 }
 
 function Vote() {
@@ -193,4 +202,4 @@ function checker() {
     }
 }
 
-Timer("Mar 18, 2021 14:50:00", "voteTimer", "registerMainButton", "Registration ended");
+Timer("Mar 25, 2020 14:46:00", "voteTimer", "registerMainButton", "Registration ended");

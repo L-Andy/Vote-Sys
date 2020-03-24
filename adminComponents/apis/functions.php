@@ -3,7 +3,7 @@
     function getPresidents() {
         $President = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='President' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='President' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($President, $candidates);
@@ -14,7 +14,7 @@
     function getVicePresidents() {
         $vicePresident = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='vicePresident' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='vicePresident' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($vicePresident, $candidates);
@@ -25,7 +25,7 @@
     function getVicePresidentsGirls() {
         $vicePresidentsGirls = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='vicePresidentGirls' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='vicePresidentGirls' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($vicePresidentsGirls, $candidates);
@@ -36,7 +36,7 @@
     function getGeneralSecretary() {
         $generalSecretary = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='generalSecretary' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='generalSecretary' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($generalSecretary, $candidates);
@@ -47,7 +47,7 @@
     function getTreasurer() {
         $Treasurer = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='Treasurer' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='Treasurer' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($Treasurer, $candidates);
@@ -58,7 +58,7 @@
     function getEducationMinister() {
         $educationMinister = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='educationMinister' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='educationMinister' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($educationMinister, $candidates);
@@ -69,7 +69,7 @@
     function getInformationMinister() {
         $informationMinister = Array();
         global $conn;
-        $Query = "SELECT * FROM Registeration WHERE post='informationMinister' AND approved='Yes'";
+        $Query = "SELECT * FROM Registeration WHERE post='informationMinister' AND approved='No'";
         $Results = mysqli_query($conn, $Query);
         while ($candidates = mysqli_fetch_assoc($Results)) {
             array_push($informationMinister, $candidates);
