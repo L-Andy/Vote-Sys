@@ -1,4 +1,6 @@
 import MySQLdb as db
+
+
 import csv
 import argparse
 
@@ -10,6 +12,7 @@ except db.Error as e:
         print "Error occured: {}".format(e)
 QueryRunner = connection.cursor()
 firstNames = []
+passports = []
 
 def dataDump():
     Query = """INSERT INTO `Vote`.`Users` 
@@ -51,24 +54,25 @@ def dataVerifier():
     rows = QueryRunner.fetchall()
     print "Extracted {} rows from the database".format(len(rows))
     for i in rows:
-        firstNames.append(i[1])
+        passports.append(i[0])
 
     with open('/home/landy/Desktop/students.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         print "Starting data check"
         for rows in csv_reader:
-            if (rows[0].split(' ')[0] not in firstNames):
-                print "{} doesn't exist in the database".format(rows[0])
+            if (rows[1] not in passports):
+                print "{} :: {}".format(rows[0], rows[1])
             else:
                 print "***{} is verified".format(rows[0])
+                continue
 
 dataDump()
+dataVerifier()
+def main():
+    ap = argparse.ArgumentParser(description="Simple py script to dump and verify mass data to mysql data")
+    ap.add_argument('-D', '--dump', type=str, help="Add multiple data to data from a csv")
+    ap.add_argument('-V', '--verify',type=str, help="Verify added data using a dumping csv")
+    args = ap.parse_args()
 
-# def main():
-#     ap = argparse.ArgumentParser(description="Simple py script to dump and verify mass data to mysql data")
-#     ap.add_argument('-D', '--dump', type=str, help="Add multiple data to data from a csv")
-#     ap.add_argument('-V', '--verify',type=str, help="Verify added data using a dumping csv")
-#     args = ap.parse_args()
-
-# if __name__ == '_main__':
-#     main()
+if __name__ == '_main__':
+    main()

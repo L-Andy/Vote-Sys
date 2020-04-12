@@ -92,7 +92,7 @@
     <ol class="w3-medium" style="text-align: left">
         <?php
             foreach ($VpGsFinals as $VpGFinal) {?>
-                <li><?php echo $VpGFinal['firstName'].' '.$VpGFinal['lastName'].' - '.$vPGFinal['counts'];?></li>
+                <li><?php echo $VpGFinal['firstName'].' '.$VpGFinal['lastName'].' - '.$VpGFinal['counts'];?></li>
             <?php }
         ?>
     </ol>

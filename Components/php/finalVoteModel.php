@@ -20,7 +20,7 @@
             </div>
             <h2 id="emailError" class="w3-small w3-text-red" style="margin: 10px;"></h2>
             <br />
-            
+            <div id="votingstatus" style="display: none">Voting... Please wait</div>
             <div id="finalPipe"></div>
             <button id="voteButton" class="w3-button w3-green w3-medium w3-round" onclick="Vote()"><i class="fas fa-vote-yea"></i>  Finish</button>
             <button class="w3-button w3-red w3-medium w3-round" onclick="Launch('none')"><i class="fas fa-window-close"></i>  Close</button>

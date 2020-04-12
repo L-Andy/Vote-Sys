@@ -37,7 +37,7 @@
                 <button id="voteMainButton" class="w3-button w3-round w3-medium w3-green" onclick="EventLoader('Vote')"><i class="fas fa-vote-yea"></i>  Vote</button>
                 <br /><br />
                 <?php include('Components/php/results.php');?>
-                <div id="mainWindow"></div>
+                <div id="mainWindow"><?php include('Components/php/campaign.php');?></div>
                 <br />
                 <?php include('Components/php/errors.php');?>
                 <?php include('Components/php/status.php');?>
@@ -87,5 +87,5 @@
     include('Components/php/viewCandidates.php');
     include('Components/php/Vote.php');
     include('Components/php/finalVoteModel.php');
-    include('Components/php/campaign.php');
+    // include('Components/php/campaign.php');
 ?>

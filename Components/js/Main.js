@@ -98,10 +98,16 @@ function Vote() {
         document.getElementById("passportNoError").innerHTML = "";
         document.getElementById('emailError').innerHTML = "";
         $.ajax({
+            beforeSend: function(html) {
+               $("#votingstatus").show(); 
+            },
             url: 'Components/apis/Vote.php',
             method: 'POST',
             datatype: 'json',
             data: Candidates,
+            complete: function(html) {
+                $("#votingstatus").hide();
+            },
             success: function(html) {
                 $("#finalPipe").html(html).show();
             }
@@ -145,6 +151,7 @@ function Selector(target, data) {
 }
 
 function Timer(date, target, effect, msg) {
+    document.getElementById("voteMainButton").disabled=true;
     let deadline = new Date(date).getTime(); 
     let x = setInterval(function() { 
         let now = new Date().getTime(); 
@@ -166,7 +173,34 @@ function Timer(date, target, effect, msg) {
     }, 1000); 
 }
 
+
+
 function Timer2(date, target, effect, msg) {
+    document.getElementById("voteMainButton").disabled=true;
+    let deadline = new Date(date).getTime(); 
+    let x = setInterval(function() { 
+        let now = new Date().getTime(); 
+        let t = deadline - now; 
+        let days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+        let hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+        let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+        let seconds = Math.floor((t % (1000 * 60)) / 1000); 
+        document.getElementById(target).innerHTML = "Verified candidates will be displayed under view candidates in 48hrs and Voting will begin in  "+ days + "d "  
+        + hours + "h " + minutes + "m " + seconds + "s "; 
+            if (t < 0) { 
+                tracker.regTracker = null;
+                tracker.voteTracker = 'startvote';
+                clearInterval(x); 
+                document.getElementById(target).innerHTML = msg;
+                document.getElementById(target).value = msg;
+                document.getElementById(effect).disabled=true;
+                Launch('none');
+                document.getElementById('mainWindow').innerHTML = '';
+            } 
+    }, 1000); 
+}
+
+function Timer3(date, target, effect, msg) {
     document.getElementById("voteMainButton").disabled=false;
     let deadline = new Date(date).getTime(); 
     let x = setInterval(function() { 
@@ -176,7 +210,7 @@ function Timer2(date, target, effect, msg) {
         let hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
         let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
         let seconds = Math.floor((t % (1000 * 60)) / 1000); 
-        document.getElementById(target).innerHTML = "**Voting process expiring in "+ days + "d "  
+        document.getElementById(target).innerHTML = "Voting will end in  "+ days + "d "  
         + hours + "h " + minutes + "m " + seconds + "s "; 
             if (t < 0) { 
                 clearInterval(x); 
@@ -196,10 +230,12 @@ setInterval(() => {
 
 function checker() {
     if (tracker.regTracker === 'done') {
-        Timer2("Jun 16, 2021 06:31:00", "voteTimer2", "voteMainButton", "voting process ended")
-    } else {
-        document.getElementById("voteMainButton").disabled=true;
+        Timer2("Mar 25, 2020 13:43:00", "voteTimer2", "voteMainButton", "voting process has started")
+    } 
+
+    if (tracker.voteTracker === 'startvote') {
+        Timer3("Apr 27, 2020 13:50:00", "voteTimer2", "voteMainButton", "voting process has ended")
     }
 }
 
-Timer("Mar 25, 2020 14:46:00", "voteTimer", "registerMainButton", "Registration ended");
+Timer("Mar 25, 2020 13:40:00", "voteTimer", "registerMainButton", "Registration ended");

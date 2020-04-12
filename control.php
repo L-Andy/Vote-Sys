@@ -33,6 +33,7 @@
                         Payment: <a href="Components/uploads/<?php echo $president['Payment'];?>" target="_blank">Check</a><br />
                         <div id="<?php echo $president['passportNo'];?>"></div>
                         <hr style="margin-bottom: 10px">
+                        <div id="verifystatus" style="display: none;">verifying....</div>
                         <div class="w3-container">
                             <button class="w3-green w3-button w3-small w3-round" style="float: left" onclick="Approve('<?php echo $president['passportNo'];?>')">Approve</button>
                             <button class="w3-red w3-button w3-small w3-round" style="float: right">Delete</button>

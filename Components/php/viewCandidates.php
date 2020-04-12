@@ -23,7 +23,7 @@
                 <li><a href="<?php 
                     if ($Vp['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$Vp['manifesto'];};
-                    ?>" target="_blank"><?php echo $Vp['firstName'].' '.$Vp['lastName'].' - '.$Vp['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $Vp['firstName'].' '.$Vp['lastName'].' - '.$Vp['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -37,7 +37,7 @@
                 <li><a href="<?php 
                     if ($VpG['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$VpG['manifesto'];};
-                    ?>" target="_blank"><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$vPG['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$vPG['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -51,7 +51,7 @@
                 <li><a href="<?php 
                     if ($Gsec['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$Gsec['manifesto'];};
-                    ?>" target="_blank"><?php echo $Gsec['firstName'].' '.$Gsec['lastName'].' - '.$Gsec['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $Gsec['firstName'].' '.$Gsec['lastName'].' - '.$Gsec['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -65,7 +65,7 @@
                 <li><a href="<?php 
                     if ($Tr['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$Tr['manifesto'];};
-                    ?>" target="_blank"><?php echo $Tr['firstName'].' '.$Tr['lastName'].' - '.$Tr['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $Tr['firstName'].' '.$Tr['lastName'].' - '.$Tr['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -79,7 +79,7 @@
                 <li><a href="<?php 
                     if ($EducM['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$EducM['manifesto'];};
-                    ?>" target="_blank"><?php echo $EducM['firstName'].' '.$EducM['lastName'].' - '.$EducM['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $EducM['firstName'].' '.$EducM['lastName'].' - '.$EducM['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
@@ -93,7 +93,7 @@
                 <li><a href="<?php 
                     if ($InfoM['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$InfoM['manifesto'];};
-                    ?>" target="_blank"><?php echo $InfoM['firstName'].' '.$InfoM['lastName'].' - '.$InfoM['wilaya'];?></li>
+                    ?>" target="_blank"><?php echo $InfoM['firstName'].' '.$InfoM['lastName'].' - '.$InfoM['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>
