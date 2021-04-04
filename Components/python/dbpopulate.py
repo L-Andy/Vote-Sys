@@ -1,8 +1,4 @@
-import MySQLdb as db
-
-
-import csv
-import argparse
+import MySQLdb as db, csv, argparse
 
 
 try:

@@ -1,6 +1,7 @@
 <?php
     include('config.php');
-
+    $errors = Array();
+    $status = Array();
     if (isset($_POST['register'])) {
         $userFirstName = $_POST['fn'];
         $userSecondNames = $_POST['sn'];
@@ -11,8 +12,7 @@
         $userEmail = $_POST['email'];
         $userPhoneNumber = $_POST['no'];
         $userWilaya = $_POST['wilaya'];
-        $errors = Array();
-        $status = Array();
+        
         
 
         $checkUserQuery = "SELECT * FROM Registeration WHERE passportNo='$userPassportNumber' AND email='$userEmail'";
@@ -100,4 +100,3 @@
             }
         }
     }
-?>  

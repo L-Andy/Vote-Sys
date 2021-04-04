@@ -1,5 +1,5 @@
 <?php
-	$conn =mysqli_connect("host", "user", "password", "database");
+	$conn =mysqli_connect("localhost", "root", "", "vote");
 	mysqli_set_charset($conn, "utf8");
 
 	if (!$conn) {

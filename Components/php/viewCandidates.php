@@ -37,7 +37,7 @@
                 <li><a href="<?php 
                     if ($VpG['manifesto'] == null) {echo "Components/php/manifestoError.php";
                     } else {echo 'Components/uploads/'.$VpG['manifesto'];};
-                    ?>" target="_blank"><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$vPG['wilaya'];?></a></li>
+                    ?>" target="_blank"><?php echo $VpG['firstName'].' '.$VpG['lastName'].' - '.$VpG['wilaya'];?></a></li>
             <?php }
         ?>
     </ol>

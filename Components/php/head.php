@@ -13,4 +13,4 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/466c4b4d15.js" crossorigin="anonymous"></script>
-<link rel="icon" href="Components/images/usaa.ico">
+<link rel="icon" href="Components/images/logo.png">
