@@ -26,7 +26,7 @@
 		    </div>
             <?php
             $voterStatusChanger = "UPDATE `Users` SET `voted`='Yes' WHERE `passportNo`='$Voter'";
-            $voterEmailUpdate = "UPDATE `Vote`.`Users` SET `email`='$voterEmail' WHERE `passportNo`='$Voter'";
+            $voterEmailUpdate = "UPDATE `Users` SET `email`='$voterEmail' WHERE `passportNo`='$Voter'";
             mysqli_query($conn, $voterStatusChanger);
             mysqli_query($conn, $voterEmailUpdate);
 
