@@ -1,6 +1,6 @@
 <div id="viewCandidatesResults" class="w3-border w3-round" style="padding: 10px; display: none">
     <hr style="margin-bottom: 5px">
-    <div style="text-align: left; padding-left: 50px; font-size: 18px;">New USAA Cabinent</div>
+    <div style="text-align: left; padding-left: 50px; font-size: 18px;">New Ndejje Cabinent</div>
     <hr style="margin-top: 5px">
     <table class="w3-table-all w3-mobile" style="overflow: scroll">
         <thread>
@@ -9,7 +9,7 @@
                 <th>Post</th>
                 <th>Phone Number</th>
                 <th>Email</th>
-                <th>Wilaya</th>
+                <th>Residence</th>
             </tr>
             <tr>
                 <td><?php echo $presidentsFinals[0]['firstName'].' '.$presidentsFinals[0]['lastName'];?></td>

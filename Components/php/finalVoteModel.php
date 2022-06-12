@@ -5,11 +5,11 @@
             <i class="far fa-check-circle" style="font-size: 100px; color: #38556e"></i>
         </div>
             <hr style="margin-top: 5px">
-            <span class="w3-text-blue w3-small">**Enter your passport number and email to complete your voting</span>
+            <span class="w3-text-blue w3-small">**Enter your student's number and email to complete your voting</span>
             <br /><br />
             <div class="pan w3-border w3-round" style="displa: flex;">
                 <i class="ico fas fa-passport"></i>
-                <input id="voterNo" type="text" class="w3-input w3-border w3-round" placeholder="Passport Number" required>
+                <input id="voterNo" type="text" class="w3-input w3-border w3-round" placeholder="Student's Number" required>
             </div>
             <h2 id="passportNoError" class="w3-small w3-text-red" style="margin: 10px;"></h2>
             <br />

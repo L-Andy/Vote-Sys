@@ -9,8 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  src="Components/js/jquery v3.5 production.js"></script>
 <script src="https://kit.fontawesome.com/466c4b4d15.js" crossorigin="anonymous"></script>
 <link rel="icon" href="Components/images/logo.png">

@@ -13,11 +13,6 @@ $Trs = mainQuery('Treasurer');
 $EducMs = mainQuery('educationMinister');
 $InfoMs = mainQuery('informationMinister');
 
-
-// FINAL
-
-
-
 $presidentsFinals = resultsQuery('President');
 $VpsFinals = resultsQuery('vicePresident');
 $VpGsFinals = resultsQuery('vicePresidentGirls');
@@ -30,9 +25,10 @@ $InfoMsFinals = resultsQuery('informationMinister');
 <title>Vote</title>
 </head>
 
-<body style="background-color: #3b5243">
+<body style="background-color: #114c73">
     <div class="w3-container mainBox">
         <div class="w3-card w3-border w3-mobile w3-round s4 w3-white subBox">
+            <img src="Components/images/ndejje.png" class="w3-circle">
             <img src="Components/images/logo.png" class="w3-circle">
             <hr />
             <i class="fas fa-poll"></i> CABINENT VOTING POLL
@@ -58,15 +54,15 @@ $InfoMsFinals = resultsQuery('informationMinister');
                         <b>Voting instructions</b><br />
                         <ul>
                             <li>Follow the voting button and make your choices</li>
-                            <li>Enter the email and your passport number to complete your voting</li>
+                            <li>Enter the email and your Student's number to complete your voting</li>
                             <li>Results will be displayed immediatly the voting process has closed</li>
                             <li>Voting must be done before the timer has run out</li>
                         </ul>
                     </div>
                     <div class="w3-half"><b>Conditions for applicants</b><br />
                         <ul>
-                            <li>president: 2nd year and master 1</li>
-                            <li>other posts: 1st year, 2nd year and master 1</li>
+                            <li>president: 2nd year and Not in their final year</li>
+                            <li>other posts: All students are eligible</li>
                             <li>All applicants must fullfill all the requirements and upload required documents</li>
                             <li>Applications must be submitted before the timer has run out</li>
                             <li>All files must be uploaded in pdf format</li>
@@ -75,15 +71,14 @@ $InfoMsFinals = resultsQuery('informationMinister');
                         <b>Requirements for all applicants</b>
                         <ul>
                             <li>Written application letter</li>
-                            <li>Certificate de scolarite</li>
                             <li>Manifesto</li>
-                            <li>Application fee (1000DZ)</li>
+                            <li>Application fee (150,000 UGX)</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <hr style="margin-bottom: 5px">
-            © witbots security <?php echo date('Y'); ?>
+            <!-- © witbots security <?php echo date('Y'); ?> -->
         </div>
     </div>
 </body>

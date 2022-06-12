@@ -8,7 +8,7 @@
                 foreach ($presidents as $president) {?>
                     <li>
                         <input class="opt" type="radio" name="prsdt"
-                            onclick="Selector('president', '<?php echo $president['passportNo'];?>')"
+                            onclick="Selector('president', '<?php echo $president['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -30,7 +30,7 @@
                 foreach ($Vps as $Vp) {?>
                     <li>
                         <input class="opt" type="radio" name="vprsdt"
-                            onclick="Selector('vprsdt', '<?php echo $Vp['passportNo'];?>')"
+                            onclick="Selector('vprsdt', '<?php echo $Vp['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -52,7 +52,7 @@
                 foreach ($VpGs as $VpG) {?>
                     <li>
                         <input class="opt" type="radio" name="vprsdtg"
-                            onclick="Selector('vprsdtg', '<?php echo $VpG['passportNo'];?>')"
+                            onclick="Selector('vprsdtg', '<?php echo $VpG['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -74,7 +74,7 @@
                 foreach ($Gsecs as $Gsec) {?>
                     <li>
                         <input class="opt" type="radio" name="gs"
-                            onclick="Selector('gs', '<?php echo $Gsec['passportNo'];?>')"
+                            onclick="Selector('gs', '<?php echo $Gsec['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -96,7 +96,7 @@
                 foreach ($Trs as $Tr) {?>
                     <li>
                         <input class="opt" type="radio" name="trs"
-                            onclick="Selector('trs', '<?php echo $Tr['passportNo'];?>')"
+                            onclick="Selector('trs', '<?php echo $Tr['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -118,7 +118,7 @@
                 foreach ($EducMs as $EducM) {?>
                     <li>
                         <input class="opt" type="radio" name="edm"
-                            onclick="Selector('edm', '<?php echo $EducM['passportNo'];?>')"
+                            onclick="Selector('edm', '<?php echo $EducM['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">
@@ -140,7 +140,7 @@
                 foreach ($InfoMs as $InfoM) {?>
                     <li>
                         <input class="opt" type="radio" name="ifm"
-                            onclick="Selector('ifm', '<?php echo $InfoM['passportNo'];?>')"
+                            onclick="Selector('ifm', '<?php echo $InfoM['studentNo'];?>')"
                         />
                         <label class="w3-medium" style="margin-left: 10px;">
                             <span style="font-size: 17px;">

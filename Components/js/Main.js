@@ -21,56 +21,56 @@ function EventLoader(event) {
 
 // function RegisterCandidate() {
 
-// let Errors = [];
-// let firstName = $("#fn").val();
-// let secondName = $("#sn").val();
-// let passportNumber = $("#psn").val();
-// let yearOfAward = $("#yoe").val();
-// let university = $("#univ").val();
-// let post = $("#pst").val();
-// let Email = $("#email").val();
-// let phoneNumber = $("#no").val();
-// let wilaya = $("#wilaya").val();
-// let applicationForm = $("#application").val();
-// let payForm = $("#payment").val();
+//     let Errors = [];
+//     let firstName = $("#fn").val();
+//     let secondName = $("#sn").val();
+//     let passportNumber = $("#psn").val();
+//     let yearOfAward = $("#yoe").val();
+//     let post = $("#pst").val();
+//     let Email = $("#email").val();
+//     let phoneNumber = $("#no").val();
+//     let wilaya = $("#residence").val();
+//     let applicationForm = $("#userApplication").val();
+//     let payForm = $("#userPayment").val();
+//     let manifesto = $("#userManifesto").val();
 
-// if (firstName.length || secondName.length || passportNumber.length ||
-//     Email.length || phoneNumber.length || wilaya.length === 0) {
-//     Errors.push("Missing information. please check again")
-// }
-// if (post === 'Post') {
-//     Errors.push("Please select post");
-// }
+//     if (firstName.length || secondName.length || passportNumber.length ||
+//         Email.length || phoneNumber.length || wilaya.length === 0) {
+//         Errors.push("Missing information. please check again")
+//     }
+//     if (post === 'Post') {
+//         Errors.push("Please select post");
+//     }
 
-// if (yearOfAward === 'Year of Award') {
-//     Errors.push("Please select the year of award");
-// }
+//     if (yearOfAward === 'Year of Award') {
+//         Errors.push("Please select the year of award");
+//     }
 
-// // if (Errors.length != 0) {
-// //     alert(Errors);
-// // } else {
-//     $.ajax({
-//         method: 'POST',
-//         datatype: 'json',
-//         url: 'Components/apis/candidateRegistration.php',
-//         data: {
-//             "userFirstName":firstName,
-//             "userSeconNames":secondName,
-//             "userPassportNumber":passportNumber,
-//             "userYearOfAward":yearOfAward,
-//             "userUniversity":university,
-//             "userPost":post,
-//             "userEmail":Email,
-//             "userPhoneNumber":phoneNumber,
-//             "userWilaya":wilaya,
-//             "userApplication": applicationForm,
-//             "userPayment": payForm
-//         },
-//         success: function(html) {
-//             $("#results").html(html).show();
-//         }
-//     });
-// // }
+//     if (Errors.length != 0) {
+//         alert(Errors);
+//     } else {
+//         $.ajax({
+//             method: 'POST',
+//             datatype: 'json',
+//             url: 'Components/apis/candidateRegistration.php',
+//             data: {
+//                 "firstName": firstName,
+//                 "secondName": secondName,
+//                 "studentNumber": studentNumber,
+//                 "yearOfAward": yearOfAward,
+//                 "post": post,
+//                 "Email": Email,
+//                 "phoneNumber": phoneNumber,
+//                 "residence": residence,
+//                 "applicationForm": applicationForm,
+//                 "payForm": payForm,
+//                 "manifesto": manifesto
+//             },
+//             success: function (html) {
+//                 $("#results").html(html).show();
+//             }
+//         });
+//     }
 
 // }
 function Launch(action) {
@@ -88,7 +88,7 @@ function Vote() {
     Candidates.Voter = voter;
 
     if (Candidates.Voter.length === 0) {
-        document.getElementById('passportNoError').innerHTML = 'Passport Number required';
+        document.getElementById('passportNoError').innerHTML = 'Student number is required';
     } else if (Candidates.voterEmail.length === 0) {
         document.getElementById('emailError').innerHTML = 'Email required';
     } else {
@@ -223,14 +223,14 @@ setInterval(() => {
 function checker() {
     // pass time from the database
     if (tracker.regTracker === 'done') {
-        Timer2('Mar 25, 2020 13:43:00', 'voteTimer2', 'voteMainButton', 'voting process has started');
+        Timer2('Jun 28, 2022 09:43:00', 'voteTimer2', 'voteMainButton', 'voting process has started');
     }
 
     // time can be got from the database
     if (tracker.voteTracker === 'startvote') {
-        Timer3('Apr 27, 2020 13:50:00', 'voteTimer2', 'voteMainButton', 'voting process has ended');
+        Timer3('Jun 27, 2022 13:50:00', 'voteTimer2', 'voteMainButton', 'voting process has ended');
     }
 }
 
 // pass time from the database
-Timer('Mar 25, 2021 13:40:00', 'voteTimer', 'registerMainButton', 'Registration ended');
+Timer('Aug 24, 2022 13:40:00', 'voteTimer', 'registerMainButton', 'Registration ended');

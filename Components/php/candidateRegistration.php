@@ -10,7 +10,7 @@
         </div><br />
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-passport"></i>
-            <input name="psn" type="text" class="w3-input w3-border w3-round" placeholder="Passport Number">
+            <input name="studentNumber" type="text" class="w3-input w3-border w3-round" placeholder="Student's numer">
         </div><br />
         <select name="yoe" class="w3-border w3-round">
             <option value="null">Year of Award</option>
@@ -23,10 +23,10 @@
             <option value="2012">2012</option>
             <option value="2011">2011</option>
         </select><br /><br />
-        <div class="pan w3-border w3-round">
+        <!-- <div class="pan w3-border w3-round">
             <i class="ico fas fa-bank"></i>
             <input name="univ" type="text" class="w3-input w3-border w3-round" placeholder="University">
-        </div><br />
+        </div><br /> -->
         <select name="pst" class="w3-border w3-round">
             <option value="null" >Post</option>
             <option value="President" >President</option>
@@ -39,7 +39,7 @@
         </select><br /><br />
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-compass"></i>
-            <input name="wilaya" type="text" class="w3-input w3-border w3-round" placeholder="Wilaya">
+            <input name="residence" type="text" class="w3-input w3-border w3-round" placeholder="Residence">
         </div><br />
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-at"></i>
@@ -47,7 +47,7 @@
         </div><br />
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-phone"></i>
-            <input name="no" type="text" class="w3-input w3-border w3-round" placeholder="Active Whatsapp Number">
+            <input name="number" type="text" class="w3-input w3-border w3-round" placeholder="Active Whatsapp Number">
         </div><br />
         <div class="w3-left"><label class="w3-medium">Written Application letter (*pdf fromat)</label></div><br />
         <div class="pan w3-border w3-round">
@@ -58,12 +58,8 @@
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-bank"></i>
             <input name="userPayment" type="file" class="w3-input w3-border w3-round">
-        </div><br />
-        <div class="w3-left"><label class="w3-medium">Certificate de scolarite (*pdf format)</label></div><br />
-        <div class="pan w3-border w3-round">
-            <i class="ico fas fa-bank"></i>
-            <input name="userScolarite" type="file" class="w3-input w3-border w3-round">
-        </div><br />
+        </div>
+       <br />
         <div class="w3-left"><label class="w3-medium">Candidate's manifesto (*pdf format)</label></div><br />
         <div class="pan w3-border w3-round">
             <i class="ico fas fa-bank"></i>

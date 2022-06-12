@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
     include ('config.php');
 
     $Voter = $_POST['Voter'];
@@ -12,11 +13,11 @@
     $educationMinister = $_POST['educM'];
     
    
-    $voterChecker = "SELECT * FROM Users WHERE passportNo='$Voter' LIMIT 1";
+    $voterChecker = "SELECT * FROM Students WHERE studentNo='$Voter' LIMIT 1";
     $voterCheckerRun = mysqli_query($conn, $voterChecker);
     $voterCheckerRunFinal = mysqli_fetch_array($voterCheckerRun);
 
-    if ($voterCheckerRunFinal['voted'] == 'No') {
+    if ($voterCheckerRunFinal['voted'] == 'No' || $voterCheckerRunFinal['voted'] == '') {
         if (voteCaster($President) && voteCaster($vicePresident) 
             && voteCaster($vicePresidentGirl) && voteCaster($generalSec)
             && voteCaster($Trs) && voteCaster($infoMinister)
@@ -25,8 +26,8 @@
 			    <p><?php echo "Vote casted successfully, results at the closure of the voting process"; ?></p></h2>
 		    </div>
             <?php
-            $voterStatusChanger = "UPDATE `Users` SET `voted`='Yes' WHERE `passportNo`='$Voter'";
-            $voterEmailUpdate = "UPDATE `Users` SET `email`='$voterEmail' WHERE `passportNo`='$Voter'";
+            $voterStatusChanger = "UPDATE `Students` SET `voted`='Yes' WHERE `studentNo`='$Voter'";
+            $voterEmailUpdate = "UPDATE `Students` SET `email`='$voterEmail' WHERE `studentNo`='$Voter'";
             mysqli_query($conn, $voterStatusChanger);
             mysqli_query($conn, $voterEmailUpdate);
 
@@ -43,7 +44,7 @@
         exit(0);
     } elseif (count($voterCheckerRunFinal) == 0) {?>
         <div class="w3-panel w3-small w3-sand w3-round" style="margin-left: 30px; margin-right: 30px;"><h2 class="w3-medium w3-text-red" style="margin: 10px;">
-			<p><?php echo "Student's passport Number doesn't exist"; ?></p></h2>
+			<p><?php echo "Student's Number doesn't exist"; ?></p></h2>
 		</div>
         <?php
         exit(0);
@@ -65,13 +66,12 @@
             then increamemnt the count by 1
             and alter the count in the database
         */
-
-        $Query = "SELECT * FROM Registeration WHERE passportNo='$candidate' LIMIT 1";
+        $Query = "SELECT * FROM Registration WHERE studentNo='$candidate' LIMIT 1";
         $queryRun = mysqli_query($conn, $Query);
         $queryRunFinal = mysqli_fetch_array($queryRun);
         
         $newCount = $queryRunFinal['counts']+1;
-        $castQuery = "UPDATE `Registeration` SET `counts`='$newCount' WHERE `passportNo`='$candidate'";
+        $castQuery = "UPDATE `Registration` SET `counts`='$newCount' WHERE `studentNo`='$candidate'";
         $castQueryRun = mysqli_query($conn, $castQuery); 
         return true;
     }
